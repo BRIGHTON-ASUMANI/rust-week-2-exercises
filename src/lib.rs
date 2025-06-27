@@ -64,19 +64,20 @@ pub fn read_pushdata(script: &[u8]) -> &[u8] {
     &script[2..]
 }
 
-// pub trait Wallet {
-//     fn balance(&self) -> u64;
-// }
+pub trait Wallet {
+    fn balance(&self) -> u64;
+}
 
-// pub struct TestWallet {
-//     pub confirmed: u64,
-// }
+pub struct TestWallet {
+    pub confirmed: u64,
+}
 
-// impl Wallet for TestWallet {
-//     fn balance(&self) -> u64 {
-//         // TODO: Return the wallet's confirmed balance
-//     }
-// }
+impl Wallet for TestWallet {
+    fn balance(&self) -> u64 {
+        // TODO: Return the wallet's confirmed balance
+        self.confirmed
+    }
+}
 
 // pub fn apply_fee(balance: &mut u64, fee: u64) {
 //     // TODO: Subtract fee from mutable balance reference

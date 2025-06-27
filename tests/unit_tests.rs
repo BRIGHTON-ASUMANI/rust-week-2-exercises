@@ -59,11 +59,11 @@ fn test_script_slice() {
     assert_eq!(data.len(), 20);
 }
 
-// #[test]
-// fn test_wallet_balance_trait() {
-//     let wallet = TestWallet { confirmed: 1500 };
-//     assert_eq!(wallet.balance(), 1500);
-// }
+#[test]
+fn test_wallet_balance_trait() {
+    let wallet = TestWallet { confirmed: 1500 };
+    assert_eq!(wallet.balance(), 1500);
+}
 
 // #[test]
 // fn test_apply_fee() {
