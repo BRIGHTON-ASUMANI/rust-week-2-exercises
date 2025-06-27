@@ -1,7 +1,7 @@
 use hex::{decode, encode};
 
 pub fn decode_hex(hex_str: &str) -> Result<Vec<u8>, String> {
-        // TODO: Decode hex string into Vec<u8>, return error string on failure
+    // TODO: Decode hex string into Vec<u8>, return error string on failure
     match decode(hex_str) {
         Ok(bytes) => Ok(bytes),
         Err(e) => Err(format!("Failed to decode hex: {}", e)),
@@ -27,6 +27,8 @@ pub fn hex_to_bytes(hex: &str) -> Result<Vec<u8>, hex::FromHexError> {
 
 pub fn swap_endian_u32(num: u32) -> [u8; 4] {
     // TODO: Implement little-endian byte swap for u32
+    let bytes = num.to_be_bytes();
+    [bytes[3], bytes[2], bytes[1], bytes[0]]
 }
 
 // pub fn parse_satoshis(input: &str) -> Result<u64, String> {
