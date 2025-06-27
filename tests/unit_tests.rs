@@ -21,11 +21,11 @@ fn test_endianness_swap() {
     assert_eq!(swap_endian_u32(0x12345678), [0x78, 0x56, 0x34, 0x12]);
 }
 
-// #[test]
-// fn test_parse_satoshis_errors() {
-//     assert_eq!(parse_satoshis("1000").unwrap(), 1000);
-//     assert_eq!(parse_satoshis("abc").unwrap_err(), "Invalid satoshi amount");
-// }
+#[test]
+fn test_parse_satoshis_errors() {
+    assert_eq!(parse_satoshis("1000").unwrap(), 1000);
+    assert_eq!(parse_satoshis("abc").unwrap_err(), "Invalid satoshi amount");
+}
 
 // #[test]
 // fn test_script_classification() {

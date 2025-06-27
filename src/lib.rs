@@ -31,9 +31,13 @@ pub fn swap_endian_u32(num: u32) -> [u8; 4] {
     [bytes[3], bytes[2], bytes[1], bytes[0]]
 }
 
-// pub fn parse_satoshis(input: &str) -> Result<u64, String> {
-//     // TODO: Parse input string to u64, return error string if invalid
-// }
+pub fn parse_satoshis(input: &str) -> Result<u64, String> {
+    // TODO: Parse input string to u64, return error string if invalid
+    match input.trim().parse::<u64>() {
+        Ok(value) => Ok(value),
+        Err(_) => Err("Invalid satoshi amount".to_string()),
+    }
+}
 
 // pub enum ScriptType {
 //     P2PKH,
