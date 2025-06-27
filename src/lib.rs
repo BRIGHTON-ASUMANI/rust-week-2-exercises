@@ -1,11 +1,18 @@
 use hex::{decode, encode};
 
 pub fn decode_hex(hex_str: &str) -> Result<Vec<u8>, String> {
-    // TODO: Decode hex string into Vec<u8>, return error string on failure
+        // TODO: Decode hex string into Vec<u8>, return error string on failure
+    match decode(hex_str) {
+        Ok(bytes) => Ok(bytes),
+        Err(e) => Err(format!("Failed to decode hex: {}", e)),
+    }
 }
 
 pub fn to_big_endian(bytes: &[u8]) -> Vec<u8> {
     // TODO: Reverse the byte order of input slice and return as Vec<u8>
+    let mut reversed = bytes.to_vec();
+    reversed.reverse();
+    reversed
 }
 
 // pub fn bytes_to_hex(bytes: &[u8]) -> String {
