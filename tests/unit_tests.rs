@@ -79,15 +79,15 @@ fn test_move_txid() {
     assert_eq!(result, "txid: deadbeef");
 }
 
-// #[test]
-// fn test_opcode_parsing() {
-//     assert_eq!(Opcode::from_byte(0xac), Ok(Opcode::OpChecksig));
-//     assert_eq!(Opcode::from_byte(0x76), Ok(Opcode::OpDup));
-//     assert_eq!(
-//         Opcode::from_byte(0x00),
-//         Err("Invalid opcode: 0x00".to_string())
-//     );
-// }
+#[test]
+fn test_opcode_parsing() {
+    assert_eq!(Opcode::from_byte(0xac), Ok(Opcode::OpChecksig));
+    assert_eq!(Opcode::from_byte(0x76), Ok(Opcode::OpDup));
+    assert_eq!(
+        Opcode::from_byte(0x00),
+        Err("Invalid opcode: 0x00".to_string())
+    );
+}
 
 // #[test]
 // fn test_utxo_ownership() {
