@@ -65,12 +65,12 @@ fn test_wallet_balance_trait() {
     assert_eq!(wallet.balance(), 1500);
 }
 
-// #[test]
-// fn test_apply_fee() {
-//     let mut balance = 10000;
-//     apply_fee(&mut balance, 250);
-//     assert_eq!(balance, 9750);
-// }
+#[test]
+fn test_apply_fee() {
+    let mut balance = 10000;
+    apply_fee(&mut balance, 250);
+    assert_eq!(balance, 9750);
+}
 
 // #[test]
 // fn test_move_txid() {
