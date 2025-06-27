@@ -59,9 +59,10 @@ pub fn classify_script(script: &[u8]) -> ScriptType {
 // TODO: complete Outpoint tuple struct
 pub struct Outpoint(pub String, pub u32);
 
-// pub fn read_pushdata(script: &[u8]) -> &[u8] {
-//     // TODO: Return the pushdata portion of the script slice (assumes pushdata starts at index 2)
-// }
+pub fn read_pushdata(script: &[u8]) -> &[u8] {
+    // TODO: Return the pushdata portion of the script slice (assumes pushdata starts at index 2)
+    &script[2..]
+}
 
 // pub trait Wallet {
 //     fn balance(&self) -> u64;
