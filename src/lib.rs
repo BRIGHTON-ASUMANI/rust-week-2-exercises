@@ -25,9 +25,9 @@ pub fn hex_to_bytes(hex: &str) -> Result<Vec<u8>, hex::FromHexError> {
     decode(hex)
 }
 
-// pub fn swap_endian_u32(num: u32) -> [u8; 4] {
-//     // TODO: Implement little-endian byte swap for u32
-// }
+pub fn swap_endian_u32(num: u32) -> [u8; 4] {
+    // TODO: Implement little-endian byte swap for u32
+}
 
 // pub fn parse_satoshis(input: &str) -> Result<u64, String> {
 //     // TODO: Parse input string to u64, return error string if invalid
