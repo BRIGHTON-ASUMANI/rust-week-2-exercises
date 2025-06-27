@@ -39,15 +39,22 @@ pub fn parse_satoshis(input: &str) -> Result<u64, String> {
     }
 }
 
-// pub enum ScriptType {
-//     P2PKH,
-//     P2WPKH,
-//     Unknown,
-// }
+pub enum ScriptType {
+    P2PKH,
+    P2WPKH,
+    Unknown,
+}
 
-// pub fn classify_script(script: &[u8]) -> ScriptType {
-//     // TODO: Match script pattern and return corresponding ScriptType
-// }
+pub fn classify_script(script: &[u8]) -> ScriptType {
+    // TODO: Match script pattern and return corresponding ScriptType
+    if script.starts_with(&[0x76, 0xa9, 0x14]) {
+        ScriptType::P2PKH
+    } else if script.starts_with(&[0x00, 0x14]) {
+        ScriptType::P2WPKH
+    } else {
+        ScriptType::Unknown
+    }
+}
 
 // // TODO: complete Outpoint tuple struct
 // pub struct Outpoint();

@@ -27,21 +27,21 @@ fn test_parse_satoshis_errors() {
     assert_eq!(parse_satoshis("abc").unwrap_err(), "Invalid satoshi amount");
 }
 
-// #[test]
-// fn test_script_classification() {
-//     assert!(matches!(
-//         classify_script(&[0x76, 0xa9, 0x14]),
-//         ScriptType::P2PKH
-//     ));
-//     assert!(matches!(
-//         classify_script(&[0x00, 0x14, 0xff]),
-//         ScriptType::P2WPKH
-//     ));
-//     assert!(matches!(
-//         classify_script(&[0xab, 0xcd]),
-//         ScriptType::Unknown
-//     ));
-// }
+#[test]
+fn test_script_classification() {
+    assert!(matches!(
+        classify_script(&[0x76, 0xa9, 0x14]),
+        ScriptType::P2PKH
+    ));
+    assert!(matches!(
+        classify_script(&[0x00, 0x14, 0xff]),
+        ScriptType::P2WPKH
+    ));
+    assert!(matches!(
+        classify_script(&[0xab, 0xcd]),
+        ScriptType::Unknown
+    ));
+}
 
 // #[test]
 // fn test_outpoint_destructuring() {
