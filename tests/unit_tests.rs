@@ -72,12 +72,12 @@ fn test_apply_fee() {
     assert_eq!(balance, 9750);
 }
 
-// #[test]
-// fn test_move_txid() {
-//     let original = "deadbeef".to_string();
-//     let result = move_txid(original);
-//     assert_eq!(result, "txid: deadbeef");
-// }
+#[test]
+fn test_move_txid() {
+    let original = "deadbeef".to_string();
+    let result = move_txid(original);
+    assert_eq!(result, "txid: deadbeef");
+}
 
 // #[test]
 // fn test_opcode_parsing() {
