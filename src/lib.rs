@@ -15,13 +15,13 @@ pub fn to_big_endian(bytes: &[u8]) -> Vec<u8> {
     reversed
 }
 
-// pub fn bytes_to_hex(bytes: &[u8]) -> String {
-//     // TODO: Implement conversion of bytes slice to hex string
-// }
+pub fn bytes_to_hex(bytes: &[u8]) -> String {
+    // TODO: Implement conversion of bytes slice to hex string
+}
 
-// pub fn hex_to_bytes(hex: &str) -> Result<Vec<u8>, hex::FromHexError> {
-//     // TODO: Implement conversion of hex string to bytes vector
-// }
+pub fn hex_to_bytes(hex: &str) -> Result<Vec<u8>, hex::FromHexError> {
+    // TODO: Implement conversion of hex string to bytes vector
+}
 
 // pub fn swap_endian_u32(num: u32) -> [u8; 4] {
 //     // TODO: Implement little-endian byte swap for u32
